@@ -26,6 +26,8 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;text-decoration:none;border:1px solid var(--line);font-weight:650;font-size:14px;background:var(--panel);color:inherit}
     .btn.primary{background:var(--dark);color:#fff;border-color:var(--dark)}
     .btn:hover{transform:translateY(-1px);transition:transform .18s ease,border-color .18s ease}
+    .pending-cta{cursor:default}
+    .pending-cta:hover{transform:none}
     a:focus-visible{outline:3px solid #8FB7DE;outline-offset:4px;border-radius:6px}
     section{padding:88px 0;border-top:1px solid var(--line)}
     .kicker{color:var(--accent);font-size:13px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
@@ -62,7 +64,7 @@
     @media(max-width:900px){.menus{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.wrap{width:min(calc(100% - 28px),var(--max))}.navlinks{display:none}.hero{min-height:auto;padding:84px 0 62px}section{padding:68px 0}.need-grid,.steps{grid-template-columns:1fr}.menu{padding:24px}h1{font-size:clamp(39px,12vw,58px)}}
   </style>
-  <meta name="version" content="Content Production Service Page β v0.1">
+  <meta name="version" content="Content Production Service Page β v0.2 — Business Inquiry Boundary">
 </head>
 <body>
 <header>
@@ -77,7 +79,8 @@
       <div class="eyebrow"><span class="dot"></span> Content Production β</div>
       <h1>素材を渡すだけで、<br>伝わる形の初稿をつくります。</h1>
       <p class="lead">メモ・箇条書き・既存資料・話した内容などをもとに、投稿や記事として使える形まで整理します。</p>
-      <div class="hero-actions"><a class="btn primary line-cta" href="LINE_URL_HERE">ちょっと相談してみる</a><a class="btn" href="#menu">できることを見る</a></div>
+      <!-- Business Inquiry受付方法の確定後、このCTAへ専用導線を設定する。限定無料AI相談窓口「Kimura AI Lab｜ちょい相談」には接続しない。 -->
+      <div class="hero-actions"><span class="btn primary pending-cta" aria-disabled="true">制作について相談する</span><a class="btn" href="#menu">できることを見る</a></div>
     </div>
   </section>
 
@@ -161,7 +164,8 @@
       <div class="kicker">Contact</div>
       <h2>まとまっていなくても、まず相談できます。</h2>
       <p>現時点では、リアルで接点のある方・ご紹介・既存の相談者を中心にβ版として対応しています。</p>
-      <div class="hero-actions"><a class="btn primary line-cta" href="LINE_URL_HERE">ちょっと相談してみる</a><a class="btn" href="../../">Digital Cardに戻る</a></div>
+      <!-- Business Inquiry受付方法の確定後、このCTAへ専用導線を設定する。限定無料AI相談窓口「Kimura AI Lab｜ちょい相談」には接続しない。 -->
+      <div class="hero-actions"><span class="btn primary pending-cta" aria-disabled="true">制作について相談する</span><a class="btn" href="../../">Digital Cardに戻る</a></div>
     </div>
   </section>
 </main>
