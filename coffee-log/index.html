@@ -12,7 +12,7 @@
     header{border-bottom:1px solid var(--line);background:rgba(247,249,252,.92)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:750;letter-spacing:.04em}.back{font-size:13px;color:var(--muted);text-decoration:none}
     main{padding:72px 0 96px}.eyebrow{font-size:13px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(40px,7vw,68px);line-height:1.12;letter-spacing:-.04em;margin:14px 0 22px}.lead{font-size:19px;color:#53637A;max-width:780px}.price{font-size:42px;font-weight:800;letter-spacing:-.03em;margin:28px 0 8px}.price small{font-size:14px;color:var(--muted);font-weight:600}
     .panel{margin-top:34px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px}.panel h2{margin:0 0 12px;font-size:26px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}.card{border:1px solid var(--line);border-radius:16px;padding:20px;background:#fff}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;margin-top:18px;padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:750;background:var(--dark);color:#fff;border:1px solid var(--dark)}.btn.disabled{opacity:.55;pointer-events:none}.note{margin-top:16px;color:var(--muted);font-size:13px}.notice{margin-top:24px;padding:16px 18px;border-left:3px solid var(--accent);background:var(--accent2);color:#355A7A;border-radius:0 12px 12px 0;font-size:14px}footer{padding:28px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;margin-top:18px;padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:750;background:var(--dark);color:#fff;border:1px solid var(--dark)}.note{margin-top:16px;color:var(--muted);font-size:13px}.notice{margin-top:24px;padding:16px 18px;border-left:3px solid var(--accent);background:var(--accent2);color:#355A7A;border-radius:0 12px 12px 0;font-size:14px}footer{padding:28px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
     @media(max-width:640px){.grid{grid-template-columns:1fr}.panel{padding:22px}}
   </style>
   <meta name="version" content="Coffee Log Sales v0.1-sandbox">
@@ -33,14 +33,14 @@
       <article class="card"><h3>また買いたいを残す</h3><p>味の一言と評価を残し、次回の定番候補をすぐ確認できます。</p></article>
       <article class="card"><h3>専門管理にしすぎない</h3><p>抽出条件やフレーバーホイールではなく、日常で続けやすい記録を優先しています。</p></article>
     </div>
-    <a class="btn disabled" href="#" aria-disabled="true">Sandbox Payment Link 接続待ち</a>
-    <div class="note">本ページは販売検証用Sandboxです。本番販売はOwner確認後に有効化します。</div>
+    <a class="btn" href="https://buy.stripe.com/test_00w28k9wx3ZF8CM2RAgEg00">Sandboxで購入テスト</a>
+    <div class="note">本ページと決済はSandboxです。実課金は発生しません。本番販売はOwner確認後に有効化します。</div>
   </section>
 
   <section class="panel">
     <h2>含まれるもの</h2>
     <p>設定済みのCoffee Log本体、比較ビュー、サンプルデータ、簡潔な使い方ガイド。Brew Log連携、AI振り返り、高度な抽出分析は初回版には含みません。</p>
-    <div class="notice">購入後はStripeから受け取りページへ移動し、そこから自身のNotionへ複製する流れを予定しています。</div>
+    <div class="notice">購入完了後はStripeから受け取りページへ移動し、そこから自身のNotionへ複製する流れです。</div>
   </section>
 </div></main>
 <footer><div class="wrap">© Kimura AI Lab</div></footer>
