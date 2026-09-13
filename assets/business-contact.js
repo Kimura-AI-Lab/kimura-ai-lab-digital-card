@@ -3,14 +3,17 @@
   const BUSINESS_LINE_URL = "https://lin.ee/6QQOmGI";
   const subject = "Kimura AI Lab｜コンテンツ制作についての相談";
   const href = `mailto:${BUSINESS_INQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}`;
-  const isDigitalCard = location.pathname === "/kimura-ai-lab-digital-card/" || location.pathname.endsWith("/kimura-ai-lab-digital-card/index.html");
 
   document.querySelectorAll("[data-business-inquiry]").forEach((link) => {
     link.setAttribute("href", href);
-
-    if (!isDigitalCard) return;
-
     link.textContent = "メールで相談する";
+
+    const container = link.parentNode;
+    const hasLineLink = Array.from(container.querySelectorAll("a")).some(
+      (item) => item.getAttribute("href") === BUSINESS_LINE_URL
+    );
+
+    if (hasLineLink) return;
 
     const lineLink = document.createElement("a");
     lineLink.className = "btn primary";
@@ -20,6 +23,6 @@
     lineLink.setAttribute("aria-label", "Kimura AI LabのLINE公式アカウントを開く");
     lineLink.textContent = "LINEで相談する";
 
-    link.parentNode.insertBefore(lineLink, link);
+    container.insertBefore(lineLink, link);
   });
 })();
