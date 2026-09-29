@@ -2,10 +2,11 @@
   const BUSINESS_INQUIRY_EMAIL = "kimura.business.ai+inquiry@gmail.com";
   const BUSINESS_LINE_URL = "https://lin.ee/6QQOmGI";
   const INSTAGRAM_URL = "https://www.instagram.com/kimura_ai_lab/";
-  const subject = "Kimura AI Lab｜コンテンツ制作についての相談";
-  const href = `mailto:${BUSINESS_INQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}`;
+  const DEFAULT_SUBJECT = "Kimura AI Lab｜コンテンツ制作についての相談";
 
   document.querySelectorAll("[data-business-inquiry]").forEach((link) => {
+    const subject = link.dataset.inquirySubject || DEFAULT_SUBJECT;
+    const href = `mailto:${BUSINESS_INQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}`;
     link.setAttribute("href", href);
     link.textContent = "メールで相談する";
 
